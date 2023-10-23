@@ -4,7 +4,7 @@ import FormRegistration from 'components/FormRegistration/FormRegistration';
 const RegisterPage = () => {
   return (
     <>
-      <Text fontSize={24}>Registration</Text>
+      <Text fontSize={32}>Registration</Text>
       <FormRegistration />
     </>
   );

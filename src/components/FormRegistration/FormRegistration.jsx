@@ -1,18 +1,5 @@
-// import {
-//   Button,
-//   FormControl,
-//   FormHelperText,
-//   FormLabel,
-//   Input,
-// } from '@chakra-ui/react';
-// import { useState } from 'react';
-import {
-  FormWrap,
-  InputWrap,
-  Label,
-  Input,
-  Button,
-} from './FormRegistration.styled';
+import { Button, FormLabel, Input } from '@chakra-ui/react';
+import { FormWrap } from './FormRegistration.styled';
 import { useDispatch } from 'react-redux';
 import { register } from 'redux/authorization/operations';
 
@@ -38,60 +25,37 @@ const FormRegistration = () => {
   return (
     <>
       <FormWrap onSubmit={handleSubmit} autoComplete="off">
-        <InputWrap>
-          <Label htmlFor="name">Name</Label>
-          <Input
-            type="text"
-            name="name"
-            placeholder="Name"
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-          />
-        </InputWrap>
-        <InputWrap>
-          <Label htmlFor="email">Email</Label>
-          <Input
-            type="email"
-            name="email"
-            placeholder="Email"
-            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-            title="Please add your real email"
-            required
-          />
-        </InputWrap>
-        <InputWrap>
-          <Label htmlFor="password">Password</Label>
-          <Input
-            type="password"
-            name="password"
-            placeholder="Password"
-            pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
-            title="Password should compleat from leters, numbers, simbols"
-            required
-          />
-        </InputWrap>
-        <Button type="submit">Register</Button>
-      </FormWrap>
-
-      {/* <FormControl isRequired mt="40px" onSubmit={handleSubmit}>
-        <FormLabel>First name</FormLabel>
-        <Input name="name" type="text" id="name" placeholder="First name" />
-        <FormLabel>Email</FormLabel>
-        <Input name="email" type="email" id="email" placeholder="Email" />
-        <FormHelperText>We'll never share your email.</FormHelperText>
-        <FormLabel>Password</FormLabel>
+        <FormLabel>Name</FormLabel>
         <Input
-          name="password"
-          type="password"
-          id="password"
-          placeholder="Password"
+          type="text"
+          name="name"
+          placeholder="Name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
         />
-
-        <Button colorScheme="teal" size="md" type="submit" mt="20px">
+        <FormLabel mt="10px">Email</FormLabel>
+        <Input
+          type="email"
+          name="email"
+          placeholder="Email"
+          pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+          title="Please add your real email"
+          required
+        />
+        <FormLabel mt="10px">Password</FormLabel>
+        <Input
+          type="password"
+          name="password"
+          placeholder="Password"
+          pattern="^[a-zA-Z0-9!@#$%^&*()-_=+`~[\]{}|:<>/?]+$"
+          title="Password should compleat from leters, numbers, simbols"
+          required
+        />
+        <Button color="white" bgColor="teal" mt="20px" type="submit">
           Register
         </Button>
-      </FormControl> */}
+      </FormWrap>
     </>
   );
 };

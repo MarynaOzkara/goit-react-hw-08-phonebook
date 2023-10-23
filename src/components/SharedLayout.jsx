@@ -6,7 +6,7 @@ const SharedLayout = () => {
   return (
     <Box maxW="1200px" ml="auto" mr="auto">
       <AppBar />
-      <Box p={[30, 15]}>
+      <Box w="500px" ml="auto" mr="auto" p={[30, 15]}>
         <Outlet />
       </Box>
     </Box>

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 export const FormWrap = styled.form`
-  width: 500px;
+  width: 400px;
   margin-top: 30px;
 `;
 export const InputWrap = styled.div`

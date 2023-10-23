@@ -4,7 +4,7 @@ import FormLogin from 'components/FormLogin';
 const LoginPage = () => {
   return (
     <>
-      <Text fontSize={24}>Login</Text>
+      <Text fontSize={32}>Login</Text>
       <FormLogin />
     </>
   );
